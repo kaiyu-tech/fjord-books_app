@@ -3,5 +3,3 @@
 .gitignore linguist-generated
 
 Gemfile.lock linguist-generated
-
-db/schema.rb linguist-generated
