@@ -1,14 +1,15 @@
 en:
-  helpers:
-    submit:
-      create: Create
-      update: Update
-    label:
+  activerecord:
+    attributes:
       book: &book
         title: Title
         memo: Memo
         author: Author
         picture: Picture
+  helpers:
+    submit:
+      create: Create
+      update: Update
   books:
     index:
       books: Books
