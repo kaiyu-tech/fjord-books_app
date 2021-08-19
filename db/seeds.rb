@@ -47,14 +47,20 @@ User.destroy_all
 User.create!(
   email: 'test@example.com',
   password: 'password',
-  password_confirmation: 'password'
+  password_confirmation: 'password',
+  postcode: "postcode",
+  address: "address",
+  biography: "biography1\nbiography2\nbiography3"
 )
 
 50.times do |i|
   User.create!(
     email: "test#{i}@example.com",
     password: 'password',
-    password_confirmation: 'password'
+    password_confirmation: 'password',
+    postcode: "postcode",
+    address: "address",
+    biography: "biography1\nbiography2\nbiography3"
   )
 end
 

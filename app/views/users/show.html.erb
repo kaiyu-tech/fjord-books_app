@@ -2,7 +2,19 @@
 
 <p>
   <strong>email:</strong>
-  <%= @user.email %>
+  <p><%= @user.email %></p>
+</p>
+<p>
+  <strong>postcode:</strong>
+  <p><%= @user.postcode %></p>
+</p>
+<p>
+  <strong>address:</strong>
+  <p><%= @user.address %></p>
+</p>
+<p>
+  <strong>biography:</strong>
+  <p><%== @user.biography.gsub(/\R/, '<br>') %></p>
 </p>
 
 <%= link_to 'back', users_path %>
