@@ -1,7 +1,9 @@
 ja:
   activerecord:
+    models:
+      book: 書籍
     attributes:
-      book: &book
+      book:
         title: タイトル
         memo: メモ
         author: 著者
@@ -13,21 +15,18 @@ ja:
   books:
     index:
       books: 書籍一覧
-      <<: *book
       japanese: Japanese
       english: English
-    show:
-      <<: *book
     new:
-      new_book: 本を追加する
+      new_book: 書籍を追加する
     edit:
-      editing_book: 本を編集する
+      editing_book: 書籍を編集する
     create:
-      success: 本が追加されました。
+      success: "%{model}が追加されました。"
     update:
-      success: 本が更新されました。
+      success: "%{model}が更新されました。"
     destroy:
-      success: 本が削除されました。
+      success: "%{model}が削除されました。"
   new: 追加
   show: 表示
   edit: 編集
