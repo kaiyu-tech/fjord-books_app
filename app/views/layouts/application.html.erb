@@ -20,6 +20,15 @@
         <%= link_to "Login", new_user_session_path, class: 'navbar-link'  %>
       <% end %>
     </p>
+    <p class="navbar-text pull-right">
+      <% if user_signed_in? %>
+        <% if controller_name == 'books' %>
+          Books / <%= link_to 'Users', users_path, class: 'navbar-link' %>
+        <% else %>
+          <%= link_to 'Books', root_path, class: 'navbar-link' %> / Users
+        <% end %>
+      <% end %>
+    </p>
 
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
