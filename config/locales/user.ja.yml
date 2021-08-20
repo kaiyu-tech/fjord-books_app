@@ -1,0 +1,24 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        email: メールアドレス
+        postcode: 郵便番号
+        address: 住所
+        biography: 自己紹介
+  users:
+    index:
+      users: ユーザー
+    show:
+      show_book: ユーザー情報
+    edit:
+      editing_user: ユーザーを編集する
+  show: 表示
+  back: 戻る
+  sign_up: アカウント登録
+  login: ログイン
+  logged_in_as: としてログインしました。
+  edit_profile: プロフィール編集
+  logout: ログアウト

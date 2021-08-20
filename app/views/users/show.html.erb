@@ -1,20 +1,20 @@
-<h1>Users</h1>
+<h1><%= t('.show_book') %></h1>
 
 <p>
-  <strong>email:</strong>
+  <strong><%= User.human_attribute_name(:email) %>:</strong>
   <p><%= @user.email %></p>
 </p>
 <p>
-  <strong>postcode:</strong>
+  <strong><%= User.human_attribute_name(:postcode) %>:</strong>
   <p><%= @user.postcode %></p>
 </p>
 <p>
-  <strong>address:</strong>
+  <strong><%= User.human_attribute_name(:address) %>:</strong>
   <p><%= @user.address %></p>
 </p>
 <p>
-  <strong>biography:</strong>
+  <strong><%= User.human_attribute_name(:biography) %>:</strong>
   <p><%== @user.biography.gsub(/\R/, '<br>') %></p>
 </p>
 
-<%= link_to 'back', users_path %>
+<%= link_to t('back'), users_path %>

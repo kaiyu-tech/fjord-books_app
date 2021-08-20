@@ -48,8 +48,8 @@ User.create!(
   email: 'test@example.com',
   password: 'password',
   password_confirmation: 'password',
-  postcode: "postcode",
-  address: "address",
+  postcode: 'postcode',
+  address: 'address',
   biography: "biography1\nbiography2\nbiography3"
 )
 
@@ -58,8 +58,8 @@ User.create!(
     email: "test#{i}@example.com",
     password: 'password',
     password_confirmation: 'password',
-    postcode: "postcode",
-    address: "address",
+    postcode: 'postcode',
+    address: 'address',
     biography: "biography1\nbiography2\nbiography3"
   )
 end
