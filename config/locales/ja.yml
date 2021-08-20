@@ -1,0 +1,35 @@
+ja:
+  activerecord:
+    models:
+      book: 書籍
+    attributes:
+      book:
+        title: タイトル
+        memo: メモ
+        author: 著者
+        picture: 写真
+  helpers:
+    submit:
+      create: 登録
+      update: 更新
+  books:
+    index:
+      books: 書籍一覧
+      japanese: Japanese
+      english: English
+    new:
+      new_book: 書籍を追加する
+    edit:
+      editing_book: 書籍を編集する
+    create:
+      success: "%{model}が追加されました。"
+    update:
+      success: "%{model}が更新されました。"
+    destroy:
+      success: "%{model}が削除されました。"
+  new: 追加
+  show: 表示
+  edit: 編集
+  destroy: 削除
+  back: 戻る
+  confirm: 本当によろしいですか？
