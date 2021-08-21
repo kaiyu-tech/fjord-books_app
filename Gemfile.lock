@@ -298,6 +298,7 @@ DEPENDENCIES
   kaminari
   letter_opener_web
   listen (~> 3.3)
+  mini_magick
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.0)
