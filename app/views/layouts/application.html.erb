@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BooksApp</title>
+    <title>ReportsApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,6 +16,9 @@
         <ul>
           <li>
             <%= link_to Book.model_name.human, books_path %>
+          </li>
+          <li>
+            <%= link_to Report.model_name.human, reports_path %>
           </li>
           <li>
             <%= link_to User.model_name.human, users_path %>
