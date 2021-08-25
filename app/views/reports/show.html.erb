@@ -19,10 +19,6 @@
   <%= render 'comments/comments', commentable: @report %>
 </p>
 
-<% flash.each do |message_type, message| %>
-  <%= message %>
-<% end %>
-
 <p>
   <%= render 'comments/form', commentable: @report %>
 </p>
