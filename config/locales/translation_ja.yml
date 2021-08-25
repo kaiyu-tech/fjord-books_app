@@ -24,3 +24,6 @@ ja:
         body: 内容
       comment:
         comment: コメント
+  comments:
+    comments:
+      no_data: まだコメントはありません。
