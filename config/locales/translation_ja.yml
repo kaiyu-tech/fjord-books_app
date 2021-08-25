@@ -27,3 +27,5 @@ ja:
   comments:
     comments:
       no_data: まだコメントはありません。
+    create:
+      failure: "%{name}を追加できませんでした。"
