@@ -12,7 +12,7 @@
   <% @users.each do |user| %>
     <tr>
       <td><%= user.email %></td>
-      <td><%= link_to t('show'), user_path(user) %></td>
+      <td><%= link_to t('general.show'), user_path(user) %></td>
     </tr>
   <% end %>
   </tbody>

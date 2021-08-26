@@ -15,10 +15,11 @@ ja:
       show_book: ユーザー情報
     edit:
       editing_user: ユーザーを編集する
-  show: 表示
-  back: 戻る
-  sign_up: アカウント登録
-  login: ログイン
-  logged_in_as: としてログインしました。
-  edit_profile: プロフィール編集
-  logout: ログアウト
+  general:
+    show: 表示
+    back: 戻る
+    sign_up: アカウント登録
+    login: ログイン
+    logged_in_as: としてログインしました。
+    edit_profile: プロフィール編集
+    logout: ログアウト
