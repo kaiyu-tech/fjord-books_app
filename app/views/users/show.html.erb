@@ -37,12 +37,12 @@
 <p>
   <a href="<%= followings_user_path(@user) %>">
     <strong><%= @user.followings.count %></strong>
-    followings
+    <%= t('general.followings') %>
   </a>
   &nbsp;
   <a href="<%= followers_user_path(@user) %>">
     <strong><%= @user.followers.count %></strong>
-    followers
+    <%= t('general.followers') %>
   </a>
 </p>
 
@@ -51,12 +51,12 @@
     <% if current_user.followings?(@user) %>
       <%= form_with(model: current_user.active_follows.find_by(followed_id: @user.id),
                     html: { method: :delete }, local: true) do |f| %>
-        <%= f.submit "Unfollow" %>
+        <%= f.submit t('general.unfollow') %>
       <% end %>
     <% else %>
       <%= form_with(model: current_user.active_follows.build, local: true) do |f| %>
         <div><%= hidden_field_tag :followed_id, @user.id %></div>
-        <%= f.submit "Follow" %>
+        <%= f.submit t('general.follow') %>
       <% end %>
     <% end %>
   </p>
