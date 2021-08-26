@@ -20,7 +20,7 @@
         <td><%= user.postal_code %></td>
         <td><%= user.address %></td>
         <% if user.avatar.attached? %>
-          <td><%= image_tag user.avatar.variant(resize: "100x100") if user.avatar.attached? %></td>
+          <td><%= image_tag user.avatar.variant(resize: "100x100") %></td>
         <% else %>
           <td></td>
         <% end %>
