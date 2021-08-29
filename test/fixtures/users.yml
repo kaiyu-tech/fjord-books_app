@@ -1,11 +1,41 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+alice:
+  email: alice@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  name: alice
+  postal_code: 38261
+  address: 84 Lords Way, Union City, Tennessee
+  self_introduction: I am a female singer-songwriter from Japan.
+
+bob:
+  email: bob@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  name: bob
+  postal_code: 20601
+  address: 2515 Adams Avenue, Waldorf, Maryland
+  self_introduction: I am a rapper from Atlanta, Georgia, USA.
+
+carol:
+  email: carol@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  name: carol
+  postal_code: 44503
+  address: 1734 Owen Lane, Youngstown, Ohio
+  self_introduction: I am a Japanese rock band from the 1970s.
+
+dave:
+  email: dave@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  name: dave
+  postal_code: 97205
+  address: 218 Seneca Drive, Portland, Oregon
+  self_introduction: I'm an English rapper, singer, songwriter, record producer and actor.
+
+eve:
+  email: eve@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  name:
+  postal_code: 29902
+  address: 110 Jerry Dove Drive, Beaufort, South Carolina
+  self_introduction: I am a Japanese chorus group consisting of three sisters from Okinawa Prefecture.
