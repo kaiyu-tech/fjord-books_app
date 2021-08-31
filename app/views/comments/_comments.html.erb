@@ -7,7 +7,7 @@
     <% commentable.comments.order(:id).each do |comment| %>
       <div>
         <%= comment.comment %> | <%= l(comment.created_at, format: :long) %> |
-        <%= t(comment.user.name.present? ? comment.user.name : comment.user.email)  %>
+        <%= comment.user.name.present? ? comment.user.name : comment.user.email %>
         <% if current_user.id == comment.user_id %>
           | <%= link_to t('views.common.destroy'), [commentable, comment],
             method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
