@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_31_205427) do
+ActiveRecord::Schema.define(version: 2021_08_31_211135) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(version: 2021_08_31_205427) do
     t.text "comment"
     t.string "commentable_type"
     t.integer "commentable_id"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
@@ -72,9 +72,9 @@ ActiveRecord::Schema.define(version: 2021_08_31_205427) do
   create_table "reports", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
