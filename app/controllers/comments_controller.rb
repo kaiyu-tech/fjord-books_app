@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human)
     else
       flash[:alert] = t('.failure', name: Comment.model_name.human)
-      redirect_to polymorphic_path(@commentable)
+      redirect_to @commentable
     end
   end
 
