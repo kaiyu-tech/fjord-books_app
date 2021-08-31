@@ -41,7 +41,11 @@ class ReportsController < ApplicationController
   private
 
   def set_report
-    @report = current_user.reports.find(params[:id])
+    if params[:action] == "show"
+      @report = Report.find(params[:id])
+    else
+      @report = current_user.reports.find(params[:id])
+    end
   end
 
   def report_params
