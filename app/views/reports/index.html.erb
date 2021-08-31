@@ -6,7 +6,11 @@
       <th><%= Report.human_attribute_name(:created_at) %></th>
       <th><%= Report.human_attribute_name(:title) %></th>
       <th><%= Report.human_attribute_name(:body) %></th>
-      <th colspan="3"></th>
+      <% if current_user == report.user %>
+        <th colspan="3"></th>
+      <% else %>
+        <th></th>
+      <% end %>
     </tr>
   </thead>
 
