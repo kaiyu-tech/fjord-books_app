@@ -1,9 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  memo: MyText
+book1:
+  title: 'Ruby超入門'
+  memo: 'Rubyの文法の基本をやさしくていねいに解説しています。'
+  author: '五十嵐 邦明'
 
-two:
-  title: MyString
-  memo: MyText
+book2:
+  title: 'チェリー本'
+  memo: 'プログラミング経験者のためのRuby入門書です。'
+  author: '伊藤 淳一'
+
+book3:
+  title: '楽々ERDレッスン'
+  memo: '実在する帳票から本当に使えるテーブル設計を導く画期的な本！'
+  author: '羽生 章洋'

@@ -11,5 +11,14 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  def log_in_as(user, password: 'password')
+    visit root_url
+    fill_in 'Eメール', with: user.email
+    fill_in 'パスワード', with: password
+    click_on 'ログイン'
+  end
+
+  def log_out
+    click_on 'ログアウト'
+  end
 end

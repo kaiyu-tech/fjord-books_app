@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  title: MyString
-  content: MyText
+report1:
+  title: '[Day1] - 学習の準備、開発環境、HTML & CSS'
+  content: 今日は一日色々な準備をしました。
+  user: alice
 
-two:
-  user: two
-  title: MyString
-  content: MyText
+report2:
+  title: '[Day2] - HTML & CSS'
+  content: 今日はHTMLでWebサイトを作りました。
+  user: alice
+
+report3:
+  title: '[Day3] - Vi、Linux'
+  content: 今日はLinuxを初めて触りました。
+  user: alice
