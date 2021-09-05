@@ -18,6 +18,32 @@ end
 
 puts '実行中です。しばらくお待ちください...' # rubocop:disable Rails/Output
 
+User.destroy_all
+
+User.transaction do
+  55.times do |n|
+    name = Faker::Name.name
+    User.create!(
+      email: "sample-#{n}@example.com",
+      password: 'password',
+      name: name,
+      postal_code: "123-#{n.to_s.rjust(4, '0')}",
+      address: Faker::Address.full_address,
+      self_introduction: "こんにちは、#{name}です。"
+    )
+  end
+end
+
+# User.order(:id).each do |user|
+#   image_url = Faker::Avatar.image(slug: user.email, size: '150x150')
+#   user.avatar.attach(io: URI.parse(image_url).open, filename: 'avatar.png')
+# end
+
+User.order(:id).limit(5).each do |user|
+  image_url = Faker::Avatar.image(slug: user.email, size: '150x150')
+  user.avatar.attach(io: URI.parse(image_url).open, filename: 'avatar.png')
+end
+
 Book.destroy_all
 
 Book.transaction do # rubocop:disable Metrics/BlockLength
@@ -50,27 +76,6 @@ Book.transaction do # rubocop:disable Metrics/BlockLength
       picture: picture_file('no-image.png')
     )
   end
-end
-
-User.destroy_all
-
-User.transaction do
-  55.times do |n|
-    name = Faker::Name.name
-    User.create!(
-      email: "sample-#{n}@example.com",
-      password: 'password',
-      name: name,
-      postal_code: "123-#{n.to_s.rjust(4, '0')}",
-      address: Faker::Address.full_address,
-      self_introduction: "こんにちは、#{name}です。"
-    )
-  end
-end
-
-User.order(:id).each do |user|
-  image_url = Faker::Avatar.image(slug: user.email, size: '150x150')
-  user.avatar.attach(io: URI.parse(image_url).open, filename: 'avatar.png')
 end
 
 # User.destroy_all で全件削除されているはずだが念のため

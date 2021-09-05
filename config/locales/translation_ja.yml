@@ -3,6 +3,8 @@ ja:
     models:
       book: 本  #g
       user: ユーザ
+      report: 日報
+      comment: コメント
 
     attributes:
       book:
@@ -16,3 +18,14 @@ ja:
         address: 住所
         self_introduction: 自己紹介文
         avatar: ユーザ画像
+      report:
+        created_at: 投稿日
+        title: 題名
+        body: 内容
+      comment:
+        comment: コメント
+  comments:
+    comments:
+      no_data: まだコメントはありません。
+    create:
+      failure: "%{name}を追加できませんでした。"

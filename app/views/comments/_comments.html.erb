@@ -1,0 +1,18 @@
+<div>
+  <% if commentable.comments.empty? %>
+    <div>
+      <%= t('.no_data') %>
+    </div>
+  <% else %>
+    <% commentable.comments.order(:id).each do |comment| %>
+      <div>
+        <%= comment.comment %> | <%= l(comment.created_at, format: :long) %> |
+        <%= display_name(comment.user) %>
+        <% if current_user == comment.user %>
+          | <%= link_to t('views.common.destroy'), [commentable, comment],
+            method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
